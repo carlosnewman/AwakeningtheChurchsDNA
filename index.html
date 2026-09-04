@@ -1,140 +1,210 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Acts Collection — 6 E-books | Roots of the Word</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --deep: #031B4E;
+    --navy: #062A66;
+    --blue: #0A4FA3;
+    --electric: #1677D2;
+    --sky: #65C2FF;
+    --gold: #D4AF5A;
+    --light: #F5F9FF;
+    --text: #10233F;
+    --muted: #63748C;
+  }
+  * {box-sizing: border-box;}
+  html {scroll-behavior: smooth;}
+  body {margin: 0; font-family: Montserrat, Arial, sans-serif; color: var(--text); line-height: 1.6; background: #fff;}
+  .container {width: min(1120px, 92%); margin: auto;}
 
-<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="Roots of the Word — E-book Collection 1–5 and Awakening the Church's DNA."> <title>Roots of the Word | E-book Collection</title>
+  .hero {background: linear-gradient(135deg, var(--deep), var(--navy)); color: #fff; padding: 60px 0;}
+  .hero-grid {display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center;}
+  .badge {display: inline-block; background: rgba(255,255,255,0.12); padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 20px;}
+  h1 {font-size: 38px; font-weight: 800; margin: 0 0 20px; line-height: 1.25;}
+  h1 span {color: var(--sky);}
+  .hero p {font-size: 15px; color: #D7E4F5; max-width: 480px;}
+  .price {margin: 24px 0;}
+  .price small {display: block; font-size: 12px; letter-spacing: 1px; color: #9FC0E8; margin-bottom: 4px;}
+  .price strong {font-size: 40px; font-weight: 800; color: var(--gold);}
+  .cta {display: inline-block; background: var(--gold); color: var(--deep); font-weight: 800; padding: 16px 32px; border-radius: 10px; text-decoration: none; font-size: 15px; letter-spacing: 0.5px; transition: transform .2s;}
+  .cta:hover {transform: translateY(-2px);}
+  .meta {display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px; font-size: 12px; color: #C6D9EF;}
 
-<style> :root { --primary: #0a4fa3; --deep: #073b7a; --text: #334155; --muted: #64748b; --light: #f4f8fc; --white: #ffffff; --border: #dbe7f3; --shadow: 0 6px 20px rgba(10, 79, 163, 0.08); } * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--text); background: var(--light); line-height: 1.6; } a { color: inherit; text-decoration: none; } .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; } .hero { padding: 90px 0; color: var(--white); text-align: center; background: linear-gradient(135deg, var(--deep), var(--primary)); } .hero h1 { margin: 0 0 16px; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.15; } .hero p { max-width: 720px; margin: 0 auto 28px; font-size: 1.1rem; opacity: 0.95; } .button { display: inline-block; padding: 13px 24px; border-radius: 8px; color: var(--deep); background: var(--white); font-weight: 700; transition: transform 0.2s ease, box-shadow 0.2s ease; } .button:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15); } section { padding: 72px 0; } .title { margin: 0 0 12px; color: var(--deep); text-align: center; font-size: clamp(1.8rem, 4vw, 2.5rem); } .subtitle { max-width: 720px; margin: 0 auto 36px; color: var(--muted); text-align: center; } .collection { background: var(--white); } .books-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; } .book-card { padding: 24px; border: 1px solid var(--border); border-radius: 14px; background: var(--white); box-shadow: var(--shadow); text-align: center; } .book-number { display: grid; width: 48px; height: 48px; margin: 0 auto 16px; place-items: center; border-radius: 50%; color: var(--white); background: var(--primary); font-size: 1.2rem; font-weight: 700; } .book-card h3 { margin: 0 0 8px; color: var(--deep); font-size: 1.05rem; } .book-card p { margin: 0; color: var(--muted); font-size: 0.92rem; } .offer { background: #eaf3fc; } .offer-box { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; padding: 36px; border-radius: 18px; background: var(--white); box-shadow: var(--shadow); } .offer-box h2 { margin: 0 0 10px; color: var(--deep); } .offer-box p { margin: 0 0 12px; } .price { color: var(--primary); font-size: 2rem; font-weight: 700; } .offer-button { display: inline-block; padding: 14px 24px; border-radius: 8px; color: var(--white); background: var(--primary); font-weight: 700; white-space: nowrap; transition: background 0.2s ease, transform 0.2s ease; } .offer-button:hover { background: var(--deep); transform: translateY(-2px); } .testimonials { background: var(--white); } .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; } .testimonial-card { padding: 28px; border-radius: 14px; background: var(--white); box-shadow: var(--shadow); } .testimonial-card p { margin: 0 0 16px; color: var(--text); font-size: 14px; font-style: italic; } .testimonial-card .author { margin: 0; color: var(--deep); font-size: 13px; font-style: normal; font-weight: 700; } .faq { background: var(--light); } .faq-list { max-width: 820px; margin: 0 auto; } .faq-item { margin-bottom: 16px; padding: 22px 24px; border: 1px solid var(--border); border-radius: 12px; background: var(--white); } .faq-item h4 { margin: 0 0 8px; color: var(--deep); font-size: 1.05rem; } .faq-item p { margin: 0; color: var(--muted); } .footer { padding: 36px 0; color: var(--white); background: var(--deep); text-align: center; } .footer p { margin: 0 0 6px; } .footer .copyright { margin-top: 16px; } .footer .credit { color: #8fa9cc; font-size: 11px; } @media (max-width: 900px) { .books-grid { grid-template-columns: repeat(3, 1fr); } } @media (max-width: 640px) { .container { width: min(100% - 28px, 1120px); } section { padding: 52px 0; } .books-grid, .testimonials-grid, .offer-box { grid-template-columns: 1fr; } .offer-box { padding: 28px; text-align: center; } .offer-button { justify-self: center; } } </style>
+  .books {display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;}
+  .mini-book {background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; padding: 16px; text-align: center;}
+  .mini-book small {font-size: 10px; letter-spacing: 1px; color: var(--sky); font-weight: 700;}
+  .mini-book .symbol {font-size: 20px; color: var(--gold); margin: 8px 0;}
+  .mini-book b {font-size: 13px; display: block; line-height: 1.3;}
+  .mini-book em {font-size: 11px; color: #A9C3E4; display: block; margin-top: 6px;}
 
+  .light {padding: 70px 0; background: var(--light);}
+  .title {text-align: center; font-size: 30px; font-weight: 800; color: var(--deep); margin-bottom: 14px;}
+  .subtitle {text-align: center; max-width: 640px; margin: 0 auto 40px; color: var(--muted); font-size: 15px;}
+
+  .collection {display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;}
+  .book-card {background: var(--deep); border-radius: 14px; padding: 24px; box-shadow: 0 6px 20px rgba(10,79,163,0.15);}
+  .book-card .chapter-label {font-size: 12px; font-weight: 800; letter-spacing: 0.5px; color: #fff; margin: 0 0 8px;}
+  .book-card .chapter-title {font-size: 16px; font-weight: 700; color: #fff; margin: 0 0 14px; line-height: 1.35;}
+  .book-card .chapter-desc {font-size: 13px; color: #A9C3E4; line-height: 1.6; margin: 0;}
+  .book-card .chapter-desc b {color: var(--sky); font-weight: 700;}
+  .tag {display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; color: var(--blue); background: #EAF2FC; padding: 5px 10px; border-radius: 999px; width: fit-content;}
+
+  .offer {background: var(--deep); color: #fff; padding: 70px 0; text-align: center;}
+  .offer h2 {font-size: 28px; font-weight: 800; margin-bottom: 10px;}
+  .offer p {color: #C6D9EF; max-width: 600px; margin: 0 auto 30px;}
+  .bigprice {font-size: 48px; font-weight: 800; color: var(--gold); margin-bottom: 6px;}
+  .bonus-line {font-size: 14px; font-weight: 700; margin-bottom: 24px; color: #D7E4F5;}
+
+  .faq {padding: 70px 0;}
+  .faq-item {border-bottom: 1px solid #E1E8F2; padding: 18px 0;}
+  .faq-item h4 {font-size: 15px; color: var(--deep); margin: 0 0 6px;}
+  .faq-item p {font-size: 13px; color: var(--muted); margin: 0;}
+
+  .footer {background: var(--deep); color: #C6D9EF; text-align: center; padding: 30px 0; font-size: 12px;}
+
+  @media (max-width: 860px) {
+    .hero-grid {grid-template-columns: 1fr;}
+    .collection {grid-template-columns: 1fr;}
+    h1 {font-size: 28px;}
+    .testimonials-grid {grid-template-columns: 1fr;}
+  }
+</style>
 </head>
+<body>
 
-<body> <header class="hero"> <div class="container"> <h1>Roots of the Word</h1> <p> A journey through the Book of Acts — from the work of the Spirit to the expansion of Grace. </p> <a class="button" href="#collection">Explore the Collection</a> </div> </header>
+<header class="hero">
+<div class="container hero-grid">
+<div>
+<div class="badge">Complete Collection · E-books 1 to 5</div>
+<h1>A journey through Acts.<br><span>6 E-books. One purpose.</span></h1>
+<p>Bring to your home, your Sunday School, or your Small Group the collection of studies on the first 12 chapters of the book of Acts of the Apostles.<br>A journey that begins with the working of the Holy Spirit and advances to the boundless expansion of Grace and the Gospel.</p>
+<div class="price"><small>COMPLETE COLLECTION FOR</small><strong>$ 30.70</strong></div>
+<a class="cta" href="https://payfast.greenn.com.br/jaeqbrn" target="_blank" rel="noopener noreferrer">I WANT THE COMPLETE COLLECTION (EBOOKS 1 TO 5)</a>
+<div style="margin-top: 14px; font-size: 13px; font-weight: 700;"><a href="https://payfast.greenn.com.br/mf9fw2c" target="_blank" rel="noopener noreferrer" style="color: #D7E4F5; text-decoration: underline;">Only the E-book Awakening the Church's DNA — $ 10.70</a></div>
+<div class="meta"><span>✓ 6 E-books</span><span>✓ Studies in Acts</span><span>✓ Sunday School</span><span>✓ Small Groups</span></div>
+</div>
+<div class="books">
+<div class="mini-book"><small>CHAPTER 01</small><div><div class="symbol">✦</div><b>THE POWER<br>THAT TRANSFORMS</b></div><em>Acts 1–2</em></div>
+<div class="mini-book"><small>CHAPTER 02</small><div><div class="symbol">✦</div><b>A LIVING<br>COMMUNITY</b></div><em>Acts 2–4</em></div>
+<div class="mini-book"><small>CHAPTER 03</small><div><div class="symbol">✦</div><b>FAITH THAT<br>ENDURES</b></div><em>Acts 5–7</em></div>
+<div class="mini-book"><small>CHAPTER 04</small><div><div class="symbol">✦</div><b>MISSION<br>WITHOUT BORDERS</b></div><em>Acts 8–9</em></div>
+<div class="mini-book"><small>CHAPTER 05</small><div><div class="symbol">✦</div><b>GRACE<br>WITHOUT LIMITS</b></div><em>Acts 10–12</em></div>
+<div class="mini-book"><small>CHAPTER 06</small><div><div class="symbol">✦</div><b>AWAKENING THE<br>CHURCH'S DNA</b></div><em>Acts 29</em></div>
+</div>
+</div>
+</header>
 
-<main> <section id="collection" class="collection"> <div class="container"> <h2 class="title">Acts E-book Collection 1–5</h2> <p class="subtitle"> Discover practical lessons, spiritual insights, and timeless principles from the early Church. </p>
+<section class="light">
+<div class="container">
+<h2 class="title">The complete collection to<br>understand the Church in Acts</h2>
+<p class="subtitle">These six e-books form a sequence of studies that follows the advance of the early Church and turns the events of Acts into applications for the Church today.</p>
+<div class="collection">
 
-    <div class="books-grid">
-      <article class="book-card">
-        <div class="book-number">1</div>
-        <h3>The Birth of the Church</h3>
-        <p>Understanding the beginning of the Christian community and the work of the Holy Spirit.</p>
-      </article>
+<div class="book-card">
+<p class="chapter-label">CHAPTER 01</p>
+<p class="chapter-title">The Power That Transforms</p>
+<p class="chapter-desc"><b>Acts 1–2</b> — The outpouring of the Holy Spirit and its impact on the preaching and character of the first leaders.</p>
+</div>
 
-      <article class="book-card">
-        <div class="book-number">2</div>
-        <h3>The Power of Witness</h3>
-        <p>Learning how the first believers shared the Gospel with courage and conviction.</p>
-      </article>
+<div class="book-card">
+<p class="chapter-label">CHAPTER 02</p>
+<p class="chapter-title">A Living Community</p>
+<p class="chapter-desc"><b>Acts 2–4</b> — How the first community learned to live in fellowship, care for the needy, and center everything on Christ.</p>
+</div>
 
-      <article class="book-card">
-        <div class="book-number">3</div>
-        <h3>Faith in Action</h3>
-        <p>Exploring how faith became visible through service, obedience, and daily commitment.</p>
-      </article>
+<div class="book-card">
+<p class="chapter-label">CHAPTER 03</p>
+<p class="chapter-title">Faith That Endures</p>
+<p class="chapter-desc"><b>Acts 5–7</b> — The first internal and external challenges faced by the Church, and the integrity forged under pressure.</p>
+</div>
 
-      <article class="book-card">
-        <div class="book-number">4</div>
-        <h3>Grace Expanding</h3>
-        <p>Following the expansion of the Gospel across cultures, cities, and communities.</p>
-      </article>
+<div class="book-card">
+<p class="chapter-label">CHAPTER 04</p>
+<p class="chapter-title">Mission Without Borders</p>
+<p class="chapter-desc"><b>Acts 8–9</b> — The gospel breaks through borders, from a desert road to the conversion of one of its greatest opponents.</p>
+</div>
 
-      <article class="book-card">
-        <div class="book-number">5</div>
-        <h3>The Mission Continues</h3>
-        <p>Reflecting on the Church's ongoing mission and responsibility in the world today.</p>
-      </article>
-    </div>
-  </div>
+<div class="book-card">
+<p class="chapter-label">CHAPTER 05</p>
+<p class="chapter-title">Grace Without Limits</p>
+<p class="chapter-desc"><b>Acts 10–12</b> — God broadens the reach of His grace, culminating in a community sustained by persistent prayer.</p>
+</div>
+
+<div class="book-card">
+<p class="chapter-label">CHAPTER 06</p>
+<p class="chapter-title">Awakening the Church's DNA</p>
+<p class="chapter-desc"><b>Acts 29</b> — An invitation to a practical revival today, living out the same Gospel that transformed that generation.</p>
+</div>
+
+</div>
+</div>
 </section>
 
 <section class="offer">
-  <div class="container">
-    <div class="offer-box">
-      <div>
-        <h2>Complete Collection</h2>
-        <p>Get all 5 main e-books and begin your journey through the Book of Acts.</p>
-        <div class="price">$30.70</div>
-      </div>
-      <a class="offer-button" href="mailto:contact@example.com?subject=Acts%20E-book%20Collection">
-        Get the Collection
-      </a>
-    </div>
-  </div>
+<div class="container">
+<h2>Get the Complete Collection Now</h2>
+<p>6 e-books with in-depth studies on the first chapters of Acts, ready for personal use, Sunday School, or Small Groups.</p>
+<div class="bigprice">$ 30.70</div>
+<a class="cta" href="https://payfast.greenn.com.br/jaeqbrn" target="_blank" rel="noopener noreferrer">I WANT THE COMPLETE COLLECTION (EBOOKS 1 TO 5)</a>
+<div class="bonus-line" style="margin-top: 20px; margin-bottom: 0;"><a href="https://payfast.greenn.com.br/mf9fw2c" target="_blank" rel="noopener noreferrer" style="color: #D7E4F5; text-decoration: underline;">Only the E-book Awakening the Church's DNA — $ 10.70</a></div>
+</div>
 </section>
 
-<section class="offer">
-  <div class="container">
-    <div class="offer-box">
-      <div>
-        <h2>Awakening the Church's DNA</h2>
-        <p>A practical e-book for rediscovering the identity, purpose, and mission of the Church.</p>
-        <div class="price">$10.70</div>
-      </div>
-      <a class="offer-button" href="mailto:contact@example.com?subject=Awakening%20the%20Church%27s%20DNA">
-        Get the E-book
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="testimonials">
-  <div class="container">
-    <h2 class="title">What Readers Are Saying</h2>
-    <p class="subtitle">
-      Testimonials from those who have already read and studied the Acts Collection.
-    </p>
-
-    <div class="testimonials-grid">
-      <article class="testimonial-card">
-        <p>
-          "I really enjoyed reading and studying the e-books. The content is very clear, inspiring, and helps us see the Book of Acts in a practical and relevant way. Without a doubt, this is a collection worth reading and sharing!"
-        </p>
-        <p class="author">— Lucia Helena</p>
-      </article>
-
-      <article class="testimonial-card">
-        <p>
-          "It was a very enjoyable and, at the same time, challenging read. The e-books bring important lessons from Acts and help us think about how to live out a more practical and committed faith. It is wonderful to realize how the message of the early Church remains so relevant to us today!"
-        </p>
-        <p class="author">— Laurentino de Souza</p>
-      </article>
-    </div>
-  </div>
+<section class="light" style="padding: 70px 0;">
+<div class="container">
+<h2 class="title">What people are saying</h2>
+<p class="subtitle">Testimonials from those who have already read and studied the Acts Collection.</p>
+<div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
+<div style="background: #fff; border-radius: 14px; padding: 28px; box-shadow: 0 6px 20px rgba(10,79,163,0.08);">
+<p style="font-size: 14px; color: var(--text); font-style: italic; margin: 0 0 16px;">"I really enjoyed reading and studying these e-books. The content is very clear, edifying, and helps us see the book of Acts in a practical and current way. This is definitely a collection worth reading and sharing!"</p>
+<p style="font-size: 13px; font-weight: 700; color: var(--deep); margin: 0;">— Lucia Helena</p>
+</div>
+<div style="background: #fff; border-radius: 14px; padding: 28px; box-shadow: 0 6px 20px rgba(10,79,163,0.08);">
+<p style="font-size: 14px; color: var(--text); font-style: italic; margin: 0 0 16px;">"It was a very pleasant read, and at the same time challenging. These e-books bring important teachings from Acts and help us think about how to live a more practical and committed faith. It's so good to see how the message of the early Church is still so relevant to us today!"</p>
+<p style="font-size: 13px; font-weight: 700; color: var(--deep); margin: 0;">— Laurentino de Souza</p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="faq">
-  <div class="container">
-    <h2 class="title">Frequently Asked Questions</h2>
-
-    <div class="faq-list">
-      <div class="faq-item">
-        <h4>How much does the complete collection cost?</h4>
-        <p>
-          The promotional price for the complete collection is $30.70, including all 5 main e-books.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Is the e-book included in the collection price?</h4>
-        <p>
-          The e-book "Awakening the Church's DNA" is available individually for $10.70 and can also be purchased separately from the complete collection.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h4>How will I receive the e-books after purchase?</h4>
-        <p>
-          After your payment is confirmed, you will receive access to the digital materials by email.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h4>Can I use the e-books for Small Groups and Sunday School?</h4>
-        <p>
-          Yes. The materials were specifically developed for individual study, Sunday School classes, and Small Groups.
-        </p>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<h2 class="title">Frequently Asked Questions</h2>
+<div class="faq-item">
+<h4>What is the price of the complete collection?</h4>
+<p>The promotional price for the collection is $30.70, including the 5 main e-books.</p>
+</div>
+<div class="faq-item">
+<h4>Is the bonus e-book included in the price of the collection?</h4>
+<p>The e-book "Awakening the Church's DNA" has an individual price of $10.70 and can be purchased together with the collection.</p>
+</div>
+<div class="faq-item">
+<h4>How do I receive the e-books after purchase?</h4>
+<p>After payment confirmation, you will receive access to the digital materials by email.</p>
+</div>
+<div class="faq-item">
+<h4>Can I use the e-books in Small Groups and Sunday School?</h4>
+<p>Yes, the materials were designed specifically for individual study, Sunday School, and Small Groups.</p>
+</div>
+</div>
 </section>
 
-</main>
+<footer class="footer">
+<div class="container">
+<p style="font-weight:700;font-size:13px;color:#fff;margin-bottom:6px;">Roots of the Word · E-book Collection 1–5</p>
+<p style="margin-bottom:6px;">A journey through the Book of Acts — from the working of the Spirit to the expansion of Grace.</p>
+<p style="margin-bottom:16px;">E-book: Awakening the Church's DNA.</p>
+<p style="font-size:11px;color:#8FA9CC;margin-bottom:4px;">Content produced and generated by: Carlos Newman - Project Manager / Delivery Manager / Digital Producer</p>
+<p style="margin-top:16px;">Roots of the Word © 2026 — All rights reserved.</p>
+</div>
+</footer>
 
-<footer class="footer"> <div class="container"> <p><strong>Roots of the Word · E-book Collection 1–5</strong></p> <p>A journey through the Book of Acts — from the work of the Spirit to the expansion of Grace.</p> <p>E-book: Awakening the Church's DNA.</p> <p class="credit"> Material produced and generated by: Carlos Newman - Project Manager / Delivery Manager / Digital Producer </p> <p class="copyright">Roots of the Word © 2026 — All rights reserved.</p> </div> </footer> </body> </html>
+</body>
+</html>
